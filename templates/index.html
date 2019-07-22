@@ -2,14 +2,15 @@
 
 {% block main %}
 
+
+Cyrillic:<br>
 <div class="form-group">
-<form action="/" method="post">
-    Cyrillic:<br>
-    <input type="select" name="language">
+    <form action="/" method="post">
+    <select name="language">
       <option value="rus" selected>Russian</option>
       <option value="ukr">Ukrainian/Rusyn</option>
     </select><br>
-    <input type="textarea" name="cyrillic"><br>
+    <input type="text" name="cyrillic"><br>
     <input type="submit" value="Submit">
 </form>
 </div>
