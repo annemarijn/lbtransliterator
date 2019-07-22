@@ -3,8 +3,12 @@
 {% block main %}
 
 <form action="/" method="post">
-    Cyrillic (Russian):<br>
-    <input type="text" name="cyrillic"><br>
+    Cyrillic:<br>
+    <select name="language">
+      <option value="rus" selected>Russian</option>
+      <option value="ukr">Ukrainian/Rusyn</option>
+    </select><br>
+    <input type="textarea" name="cyrillic"><br>
     <input type="submit" value="Submit">
 </form>
 <br>

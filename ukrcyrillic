@@ -1,0 +1,19 @@
+symbols = str.maketrans(u"абвгґдежзийклмнопрстуфцчшь’ѳѵАБВГҐДЕЖЗИЙКЛМНОПРСТУФЦЧЬѲѴ",
+                               u"abvhgdežzyjklmnoprstufcčšʹʼfiABVHGDEŽZYJKLMNOPRSTUFCČʹFI")
+    sequence = {
+        u'є':'je',
+        u'ї':'ji',
+        u'х':'ch',
+        u'щ':'šč',
+        u'ю':'ju',
+        u'я':'ja',
+        u'Є':'Je',
+        u'Ї':'Ji',
+        u'X':'Ch',
+        u'Щ':'Šč',
+        u'Ю':'Ju',
+        u'Я':'Ja'
+    }
+
+
+NEEM SPATIES MEE!
