@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+<form action="/" method="post">
+    Cyrillic (Russian):<br>
+    <input type="text" name="cyrillic"><br>
+    <input type="submit" value="Submit">
+</form>
+<br>
+Original:<br>
+{{ cyrillic }}<br><br>
+
+Transliteration:<br>
+{{ transliteration }}
+
+
+
+
+
+{% endblock %}
