@@ -6,7 +6,7 @@
 Cyrillic:<br>
 <div class="form-group">
     <form action="/" method="post">
-    <select name="language">
+    <select name="language" onChange="setcookie()">
       <option value="rus">Russian</option>
       <option value="ukr">Ukrainian/Rusyn</option>
       <option value="bru">Belarusan</option>
@@ -22,7 +22,12 @@ Original:<br>
 Transliteration:<br>
 {{ transliteration }}
 
-
+<script type="text/javascript">
+  function setcookie() {
+    var formvalue = document.form.menu.options.value;
+    document.cookie = "language="+formvalue;
+  }
+</script>
 
 
 
