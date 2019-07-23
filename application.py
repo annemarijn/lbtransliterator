@@ -7,8 +7,8 @@ app = Flask(__name__)
 # Credit to this person for inspiration https://stackoverflow.com/questions/14173421/use-string-translate-in-python-to-transliterate-cyrillic
 #Russian
 def translitrus(text):
-    symbols = str.maketrans(u"абвгдеёжзийклмнопрстуѹфцчшъыьѣэѳѵѡАБВГДЕЁЖЗИЙКЛМНОПРСТУѸФЦЧЪЫЬѢЭѲѴѠ",
-                               u"abvgdeёžzijklmnoprstuufcčšʺyʹěėfiôABVGDEËŽZIJKLMNOPRSTUUFCČʺYʹĚĖFIÔ")
+    symbols = str.maketrans(u"абвгдеёжзийклмнопрстуѹфцчшъыьѣэѳѵѡАБВГДЕЁЖЗИЙКЛМНОПРСТУѸФЦЧШЪЫЬѢЭѲѴѠ",
+                               u"abvgdeёžzijklmnoprstuufcčšʺyʹěėfiôABVGDEËŽZIJKLMNOPRSTUUFCČŠʺYʹĚĖFIÔ")
     sequence = {
         u'х':'ch',
         u'щ':'šč',
@@ -69,6 +69,26 @@ def translitbru(text):
 
     return text.translate(symbols)
 
+# Bulgarian
+def translitbul(text):
+    symbols = str.maketrans(u"абвгдежзийклмнопрстуфцчшъьѣѫАБВГДЕЖЗИЙКЛМНОПРСТУФЦЧШЪЬѢѪ",
+                               u"abvgdežzijklmnoprstufcčšăʹěŭABVGDEŽZIJKLMNOPRSTUFCČŠĂʹĚŬ")
+    sequence = {
+        u'х':'ch',
+        u'щ':'št',
+        u'ю':'ju',
+        u'я':'ja',
+        u'X':'Ch',
+        u'Щ':'Št',
+        u'Ю':'Ju',
+        u'Я':'Ja'
+    }
+
+    for char in sequence.keys():
+        text = text.replace(char, sequence[char])
+
+    return text.translate(symbols)
+
 
 
 # Main (index) page
@@ -84,6 +104,8 @@ def index():
             transliteration = translitukr(cyrillic)
         if language == "bru":
             transliteration = translitbru(cyrillic)
+        if language == "bul":
+            transliteration = translitbul(cyrillic)
 
         return render_template("index.html", transliteration=transliteration, cyrillic=cyrillic)
 

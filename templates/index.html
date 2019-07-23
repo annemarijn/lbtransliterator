@@ -3,13 +3,15 @@
 {% block main %}
 
 
+
 Cyrillic:<br>
 <div class="form-group">
     <form action="/" method="post">
-    <select name="language" onChange="setcookie()">
+    <select name="language">
       <option value="rus">Russian</option>
       <option value="ukr">Ukrainian/Rusyn</option>
       <option value="bru">Belarusan</option>
+      <option value="bul">Bulgarian</option>
     </select><br>
     <input type="text" name="cyrillic"><br>
     <input type="submit" value="Submit">
@@ -22,12 +24,7 @@ Original:<br>
 Transliteration:<br>
 {{ transliteration }}
 
-<script type="text/javascript">
-  function setcookie() {
-    var formvalue = document.form.options.value;
-    document.cookie = "language="+formvalue;
-  }
-</script>
+
 
 
 
