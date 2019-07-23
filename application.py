@@ -27,8 +27,8 @@ def translitrus(text):
 
 # Ukrainian
 def translitukr(text):
-    symbols = str.maketrans(u"абвгґдежзийклмнопрстуфцчшь’ѳѵАБВГҐДЕЖЗИЙКЛМНОПРСТУФЦЧЬѲѴ",
-                               u"abvhgdežzyjklmnoprstufcčšʹʼfiABVHGDEŽZYJKLMNOPRSTUFCČʹFI")
+    symbols = str.maketrans(u"абвгґдежзийклмнопрстуфцчшь’ѳѵАБВГҐДЕЖЗИЙКЛМНОПРСТУФЦЧШЬѲѴ",
+                               u"abvhgdežzyjklmnoprstufcčšʹʼfiABVHGDEŽZYJKLMNOPRSTUFCČŠʹFI")
     sequence = {
         u'є':'je',
         u'ї':'ji',
@@ -49,6 +49,27 @@ def translitukr(text):
 
     return text.translate(symbols)
 
+# Belarusan
+def translitbru(text):
+    symbols = str.maketrans(u"абвгґдеëжзийклмнопрстуўфцчшыьэѳѵАБВГҐДЕЁЖЗИЙКЛМНОПРСТУЎФЦЧШЫЬЭѲѴ",
+                               u"abvhgdeëžzyjklmnoprstuŭfcčšyėʼfiABVHGDEЁŽZYJKLMNOPRSTUŬFCČŠYʹĖFI")
+    sequence = {
+        u'х':'ch',
+        u'щ':'šč',
+        u'ю':'ju',
+        u'я':'ja',
+        u'X':'Ch',
+        u'Щ':'Šč',
+        u'Ю':'Ju',
+        u'Я':'Ja'
+    }
+
+    for char in sequence.keys():
+        text = text.replace(char, sequence[char])
+
+    return text.translate(symbols)
+
+
 
 # Main (index) page
 @app.route("/", methods=["GET", "POST"])
@@ -61,6 +82,8 @@ def index():
             transliteration = translitrus(cyrillic)
         if language == "ukr":
             transliteration = translitukr(cyrillic)
+        if language == "bru":
+            transliteration = translitbru(cyrillic)
 
         return render_template("index.html", transliteration=transliteration, cyrillic=cyrillic)
 
