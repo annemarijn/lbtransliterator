@@ -89,6 +89,26 @@ def translitbul(text):
 
     return text.translate(symbols)
 
+# Macedonian
+def translitmac(text):
+    symbols = str.maketrans(u"абвгѓдежзиjкќлмнопрстуфхцчшАБВГЃДЕЖЗИJКЌЛМНОПРСТУФXЦЧШ",
+                               u"abvgǵdežzijkḱlmnoprstufhcčšABVGǴDEŽZIJKḰLMNOPRSTUFHCČŠ")
+    sequence = {
+        u's':'dz',
+        u'љ':'lj',
+        u'њ':'nj',
+        u'џ':'dž',
+        u'S':'Dz',
+        u'Љ':'Lj',
+        u'Њ':'Nj',
+        u'Џ':'Dž',
+    }
+
+    for char in sequence.keys():
+        text = text.replace(char, sequence[char])
+
+        return text.translate(symbols)
+
 
 
 # Main (index) page
@@ -106,6 +126,8 @@ def index():
             transliteration = translitbru(cyrillic)
         if language == "bul":
             transliteration = translitbul(cyrillic)
+        if language == "mac":
+            transliteration = translitmac(cyrillic)
 
         return render_template("index.html", transliteration=transliteration, cyrillic=cyrillic)
 
