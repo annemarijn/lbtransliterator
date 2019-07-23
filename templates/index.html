@@ -2,11 +2,17 @@
 
 {% block main %}
 
+<script type="text/javascript">
+function setCookie(){
+  cookievalue = document.languageform.language.value + ";";
+  document.cookie = "language=" + cookievalue;
+}
 
+</script>
 
 <b>Cyrillic:</b><br>
 <div class="form-group">
-    <form action="/" method="post">
+    <form name="languageform" action="/" method="post">
     <select name="language">
       <option value="rus">Russian</option>
       <option value="ukr">Ukrainian/Rusyn</option>
@@ -15,7 +21,7 @@
       <option value="mac">Macedonian</option>
     </select><br>
     <input type="text" name="cyrillic"><br>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" onclick="setCookie();"/>
 </form>
 </div>
 <br>
