@@ -2,26 +2,26 @@
 
 {% block main %}
 
-<script type="text/javascript">
-function setCookie(){
-  cookievalue = document.languageform.language.value + ";";
-  document.cookie = "language=" + cookievalue;
-}
 
-</script>
 
 <b>Cyrillic:</b><br>
 <div class="form-group">
     <form name="languageform" action="/" method="post">
-    <select name="language">
-      <option value="rus">Russian</option>
-      <option value="ukr">Ukrainian/Rusyn</option>
-      <option value="bru">Belarusan</option>
-      <option value="bul">Bulgarian</option>
-      <option value="mac">Macedonian</option>
+    <select name="language" id="language">
+      <?php if($_POST['submitted'] == true){ ?>
+        <option value="<?php echo $_POST['language']; ?>" selected="selected"><?php echo $_POST['language']; ?></option>
+      <?php }else{ ?>
+        <option value=""> -- select -- </option>
+      <?php } ?>
+        <option value="rus">Russian</option>
+        <option value="ukr">Ukrainian/Rusyn</option>
+        <option value="bru">Belarusan</option>
+        <option value="bul">Bulgarian</option>
+        <option value="mac">Macedonian</option>
     </select><br>
     <input type="text" name="cyrillic"><br>
-    <input type="submit" value="Submit" onclick="setCookie();"/>
+    <input type="submit" value="Submit">
+    <input type="hidden" name="submitted" id="submitted" value="true" />
 </form>
 </div>
 <br>
