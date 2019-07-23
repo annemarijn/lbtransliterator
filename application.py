@@ -109,6 +109,24 @@ def translitmac(text):
 
         return text.translate(symbols)
 
+# Serbian/Montenegrin
+def translitscr(text):
+    symbols = str.maketrans(u"абвгдђежзиjклмнопрстћуфхцчшАБВГДЕЖЗИJКЛМНОПРСТЋУФХЦЧШ",
+                               u"abvgdđežzijklmnoprstćufhcčšABVGDEŽZIJKLMNOPRSTĆUFHCČŠ")
+    sequence = {
+        u'љ':'lj',
+        u'њ':'nj',
+        u'џ':'dž',
+        u'Љ':'Lj',
+        u'Њ':'Nj',
+        u'Џ':'Dž',
+    }
+
+    for char in sequence.keys():
+        text = text.replace(char, sequence[char])
+
+        return text.translate(symbols)
+
 
 
 # Main (index) page
@@ -128,6 +146,8 @@ def index():
             transliteration = translitbul(cyrillic)
         if language == "mac":
             transliteration = translitmac(cyrillic)
+        if language == "scr":
+            transliteration = translitscr(cyrillic)
 
         return render_template("index.html", transliteration=transliteration, cyrillic=cyrillic)
 

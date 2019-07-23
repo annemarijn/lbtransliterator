@@ -1,0 +1,10 @@
+symbols = str.maketrans(u"абвгдђежзиjклмнопрстћуфхцчшАБВГДЕЖЗИJКЛМНОПРСТЋУФХЦЧШ",
+                               u"abvgdđežzijklmnoprstćufhcčšABVGDEŽZIJKLMNOPRSTĆUFHCČŠ")
+    sequence = {
+        u'љ':'lj',
+        u'њ':'nj',
+        u'џ':'dž',
+        u'Љ':'Lj',
+        u'Њ':'Nj',
+        u'Џ':'Dž',
+    }
