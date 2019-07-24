@@ -108,8 +108,8 @@ def translit(text, lang):
         }
 
     if lang == "geo":
-        symbols = str.maketrans(u"აბგდევზჱთილმნჲოჟრსჳუფქღშჩცხჴჰჵჶჷჸ",
-                        u"abgdevzētilmnjožrswupkǧščcxqhōfəɂ")
+        symbols = str.maketrans(u"აბგდევზჱთილმნჲოჟრსჳუფქღშჩცხჴჰჵჶჷჸ«»",
+                        u"abgdevzētilmnjožrswupkǧščcxqhōfəɂ“”")
         sequence = {
             u'კ':'k’',
             u'პ':'p’',
