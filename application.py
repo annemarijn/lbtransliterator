@@ -28,7 +28,7 @@ def translitrus(text):
 # Ukrainian
 def translitukr(text):
     symbols = str.maketrans(u"абвгґдежзийклмнопрстуфцчшь’ѳѵАБВГҐДЕЖЗИЙКЛМНОПРСТУФЦЧШЬѲѴ«»",
-                               u"abvhgdežzyjklmnoprstufcčšʹʼfiABVHGDEŽZYJKLMNOPRSTUFCČŠʹFI""")
+                               u"abvhgdežzyjklmnoprstufcčšʹʼfiABVHGDEŽZYJKLMNOPRSTUFCČŠʹFI“”")
     sequence = {
         u'є':'je',
         u'ї':'ji',
@@ -51,8 +51,8 @@ def translitukr(text):
 
 # Belarusan
 def translitbru(text):
-    symbols = str.maketrans(u"абвгґдеëжзийклмнопрстуўфцчшыьэѳѵАБВГҐДЕЁЖЗИЙКЛМНОПРСТУЎФЦЧШЫЬЭѲѴ",
-                               u"abvhgdeëžzyjklmnoprstuŭfcčšyėʼfiABVHGDEЁŽZYJKLMNOPRSTUŬFCČŠYʹĖFI")
+    symbols = str.maketrans(u"абвгґдеëжзийклмнопрстуўфцчшыьэѳѵАБВГҐДЕЁЖЗИЙКЛМНОПРСТУЎФЦЧШЫЬЭѲѴ«»",
+                               u"abvhgdeëžzyjklmnoprstuŭfcčšyėʼfiABVHGDEЁŽZYJKLMNOPRSTUŬFCČŠYʹĖFI“”")
     sequence = {
         u'х':'ch',
         u'щ':'šč',
@@ -71,8 +71,8 @@ def translitbru(text):
 
 # Bulgarian
 def translitbul(text):
-    symbols = str.maketrans(u"абвгдежзийклмнопрстуфцчшъьѣѫАБВГДЕЖЗИЙКЛМНОПРСТУФЦЧШЪЬѢѪ",
-                               u"abvgdežzijklmnoprstufcčšăʹěŭABVGDEŽZIJKLMNOPRSTUFCČŠĂʹĚŬ")
+    symbols = str.maketrans(u"абвгдежзийклмнопрстуфцчшъьѣѫАБВГДЕЖЗИЙКЛМНОПРСТУФЦЧШЪЬѢѪ«»",
+                               u"abvgdežzijklmnoprstufcčšăʹěŭABVGDEŽZIJKLMNOPRSTUFCČŠĂʹĚŬ“”")
     sequence = {
         u'х':'ch',
         u'щ':'št',
@@ -91,8 +91,8 @@ def translitbul(text):
 
 # Macedonian
 def translitmac(text):
-    symbols = str.maketrans(u"абвгѓдежзиjкќлмнопрстуфхцчшАБВГЃДЕЖЗИJКЌЛМНОПРСТУФXЦЧШ",
-                               u"abvgǵdežzijkḱlmnoprstufhcčšABVGǴDEŽZIJKḰLMNOPRSTUFHCČŠ")
+    symbols = str.maketrans(u"абвгѓдежзиjкќлмнопрстуфхцчшАБВГЃДЕЖЗИJКЌЛМНОПРСТУФXЦЧШ«»",
+                               u"abvgǵdežzijkḱlmnoprstufhcčšABVGǴDEŽZIJKḰLMNOPRSTUFHCČŠ“”")
     sequence = {
         u's':'dz',
         u'љ':'lj',
@@ -111,8 +111,8 @@ def translitmac(text):
 
 # Serbian/Montenegrin
 def translitscr(text):
-    symbols = str.maketrans(u"абвгдђежзиjклмнопрстћуфхцчшАБВГДЕЖЗИJКЛМНОПРСТЋУФХЦЧШ",
-                               u"abvgdđežzijklmnoprstćufhcčšABVGDEŽZIJKLMNOPRSTĆUFHCČŠ")
+    symbols = str.maketrans(u"абвгдђежзиjклмнопрстћуфхцчшАБВГДЕЖЗИJКЛМНОПРСТЋУФХЦЧШ«»",
+                               u"abvgdđežzijklmnoprstćufhcčšABVGDEŽZIJKLMNOPRSTĆUFHCČŠ“”")
     sequence = {
         u'љ':'lj',
         u'њ':'nj',
