@@ -2,9 +2,12 @@
 
 {% block main %}
 
+<h>LB transliterator</h><br><br>
+Notes on use:<br>
+* Georgian transliterator will currently not recognize უ with diacritics (not in common use)<br>
+* Currently your choice of language under "original text" will not be saved upon refreshing, so make sure to select the correct language before pressing "submit"<br><br>
 
-
-<b>Cyrillic:</b><br>
+<b>Original text</b><br>
 <div class="form-group">
     <form name="languageform" action="/" method="post">
     <select name="language" id="selectlanguage">
@@ -14,17 +17,18 @@
         <option value="bul">Bulgarian</option>
         <option value="mac">Macedonian</option>
         <option value="scr">Serbian/Montenegrin</option>
+        <option value="geo">Georgian</option>
     </select><br>
-    <input type="text" name="cyrillic"><br>
+    <input type="text" name="origtext"><br>
     <input type="submit" value="Submit">
 </form>
 
 </div>
 <br>
-<b>Original:</b><br>
-{{ cyrillic }}<br><br>
+<b>Original</b><br>
+{{ origtext }}<br><br>
 
-<b>Transliteration:</b><br>
+<b>Transliteration</b><br>
 {{ transliteration }}
 
 

@@ -107,7 +107,7 @@ def translitmac(text):
     for char in sequence.keys():
         text = text.replace(char, sequence[char])
 
-        return text.translate(symbols)
+    return text.translate(symbols)
 
 # Serbian/Montenegrin
 def translitscr(text):
@@ -125,7 +125,27 @@ def translitscr(text):
     for char in sequence.keys():
         text = text.replace(char, sequence[char])
 
-        return text.translate(symbols)
+    return text.translate(symbols)
+
+# Georgian
+def translitgeo(text):
+    symbols = str.maketrans(u"აბგდევზჱთილმნჲოჟრსჳუფქღშჩცხჴჰჵჶჷჸ",
+                        u"abgdevzētilmnjožrswupkǧščcxqhōfəɂ")
+    sequence = {
+        u'კ':'k’',
+        u'პ':'p’',
+        u'ტ':'t’',
+        u'ყ':'q’',
+        u'ძ':'dz',
+        u'წ':'c’',
+        u'ჭ':'č’',
+        u'ჯ':'dž'
+    }
+
+    for char in sequence.keys():
+        text = text.replace(char, sequence[char])
+
+    return text.translate(symbols)
 
 
 
@@ -133,23 +153,25 @@ def translitscr(text):
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
-        cyrillic = request.form.get("cyrillic")
+        origtext = request.form.get("origtext")
         language = request.form.get("language")
 
         if language == "rus":
-            transliteration = translitrus(cyrillic)
+            transliteration = translitrus(origtext)
         if language == "ukr":
-            transliteration = translitukr(cyrillic)
+            transliteration = translitukr(origtext)
         if language == "bru":
-            transliteration = translitbru(cyrillic)
+            transliteration = translitbru(origtext)
         if language == "bul":
-            transliteration = translitbul(cyrillic)
+            transliteration = translitbul(origtext)
         if language == "mac":
-            transliteration = translitmac(cyrillic)
+            transliteration = translitmac(origtext)
         if language == "scr":
-            transliteration = translitscr(cyrillic)
+            transliteration = translitscr(origtext)
+        if language == "geo":
+            transliteration = translitgeo(origtext)
 
-        return render_template("index.html", transliteration=transliteration, cyrillic=cyrillic)
+        return render_template("index.html", transliteration=transliteration, origtext=origtext)
 
     else:
        return render_template("index.html")
