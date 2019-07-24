@@ -127,6 +127,26 @@ def translitscr(text):
 
     return text.translate(symbols)
 
+# Mongolian cyrillic
+def translitmon(text):
+    symbols = str.maketrans(u"абвгдеёжзийклмноөпрстуүфцчшъыьэАБВГДЕЁЖЗИЙКЛМНОӨПРСТУҮФЦЧШЪЫЬЭ«»",
+                        u"abvgdeёžzijklmnoöprstuüfcčšʺyʹėABVGDEËŽZIJKLMNOÖPRSTUÜFCČŠʺYʹĖ“”")
+    sequence = {
+        u'х':'ch',
+        u'щ':'šč',
+        u'ю':'ju',
+        u'я':'ja',
+        u'X':'Ch',
+        u'Щ':'Šč',
+        u'Ю':'Ju',
+        u'Я':'Ja'
+    }
+
+    for char in sequence.keys():
+        text = text.replace(char, sequence[char])
+
+    return text.translate(symbols)
+
 # Georgian
 def translitgeo(text):
     symbols = str.maketrans(u"აბგდევზჱთილმნჲოჟრსჳუფქღშჩცხჴჰჵჶჷჸ",
@@ -168,6 +188,8 @@ def index():
             transliteration = translitmac(origtext)
         if language == "scr":
             transliteration = translitscr(origtext)
+        if language == "mon":
+            transliteration = translitmon(origtext)
         if language == "geo":
             transliteration = translitgeo(origtext)
 
