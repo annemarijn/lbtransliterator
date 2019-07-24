@@ -39,6 +39,88 @@ def translit(text, lang):
             u'Я':'Ja'
         }
 
+    if lang == "bru":
+        symbols = str.maketrans(u"абвгґдеëжзийклмнопрстуўфцчшыьэѳѵАБВГҐДЕЁЖЗИЙКЛМНОПРСТУЎФЦЧШЫЬЭѲѴ«»",
+                               u"abvhgdeëžzyjklmnoprstuŭfcčšyėʼfiABVHGDEЁŽZYJKLMNOPRSTUŬFCČŠYʹĖFI“”")
+        sequence = {
+            u'х':'ch',
+            u'щ':'šč',
+            u'ю':'ju',
+            u'я':'ja',
+            u'X':'Ch',
+            u'Щ':'Šč',
+            u'Ю':'Ju',
+            u'Я':'Ja'
+        }
+
+    if lang == "bul":
+        symbols = str.maketrans(u"абвгдежзийклмнопрстуфцчшъьѣѫАБВГДЕЖЗИЙКЛМНОПРСТУФЦЧШЪЬѢѪ«»",
+                               u"abvgdežzijklmnoprstufcčšăʹěŭABVGDEŽZIJKLMNOPRSTUFCČŠĂʹĚŬ“”")
+        sequence = {
+            u'х':'ch',
+            u'щ':'št',
+            u'ю':'ju',
+            u'я':'ja',
+            u'X':'Ch',
+            u'Щ':'Št',
+            u'Ю':'Ju',
+            u'Я':'Ja'
+        }
+
+    if lang == "mac":
+        symbols = str.maketrans(u"абвгѓдежзиjкќлмнопрстуфхцчшАБВГЃДЕЖЗИJКЌЛМНОПРСТУФXЦЧШ«»",
+                               u"abvgǵdežzijkḱlmnoprstufhcčšABVGǴDEŽZIJKḰLMNOPRSTUFHCČŠ“”")
+        sequence = {
+            u's':'dz',
+            u'љ':'lj',
+            u'њ':'nj',
+            u'џ':'dž',
+            u'S':'Dz',
+            u'Љ':'Lj',
+            u'Њ':'Nj',
+            u'Џ':'Dž',
+        }
+
+    if lang == "scr":
+        symbols = str.maketrans(u"абвгдђежзиjклмнопрстћуфхцчшАБВГДЕЖЗИJКЛМНОПРСТЋУФХЦЧШ«»",
+                               u"abvgdđežzijklmnoprstćufhcčšABVGDEŽZIJKLMNOPRSTĆUFHCČŠ“”")
+        sequence = {
+            u'љ':'lj',
+            u'њ':'nj',
+            u'џ':'dž',
+            u'Љ':'Lj',
+            u'Њ':'Nj',
+            u'Џ':'Dž',
+        }
+
+    if lang == "mon":
+        symbols = str.maketrans(u"абвгдеёжзийклмноөпрстуүфцчшъыьэАБВГДЕЁЖЗИЙКЛМНОӨПРСТУҮФЦЧШЪЫЬЭ«»",
+                        u"abvgdeёžzijklmnoöprstuüfcčšʺyʹėABVGDEËŽZIJKLMNOÖPRSTUÜFCČŠʺYʹĖ“”")
+        sequence = {
+            u'х':'ch',
+            u'щ':'šč',
+            u'ю':'ju',
+            u'я':'ja',
+            u'X':'Ch',
+            u'Щ':'Šč',
+            u'Ю':'Ju',
+            u'Я':'Ja'
+        }
+
+    if lang == "geo":
+        symbols = str.maketrans(u"აბგდევზჱთილმნჲოჟრსჳუფქღშჩცხჴჰჵჶჷჸ",
+                        u"abgdevzētilmnjožrswupkǧščcxqhōfəɂ")
+        sequence = {
+            u'კ':'k’',
+            u'პ':'p’',
+            u'ტ':'t’',
+            u'ყ':'q’',
+            u'ძ':'dz',
+            u'წ':'c’',
+            u'ჭ':'č’',
+            u'ჯ':'dž'
+        }
+
     for char in sequence.keys():
         text = text.replace(char, sequence[char])
 
