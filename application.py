@@ -9,13 +9,13 @@ app = Flask(__name__)
 def translit(text, lang):
     if lang == "rus":
         symbols = str.maketrans(u"абвгдеёжзийклмнопрстуѹфцчшъыьѣэѳѵѡАБВГДЕЁЖЗИЙКЛМНОПРСТУѸФЦЧШЪЫЬѢЭѲѴѠ«»",
-                               u"abvgdeёžzijklmnoprstuufcčšʺyʹěėfiôABVGDEËŽZIJKLMNOPRSTUUFCČŠʺYʹĚĖFIÔ“”")
+                               u"abvgdeëžzijklmnoprstuufcčšʺyʹěėfiôABVGDEËŽZIJKLMNOPRSTUUFCČŠʺYʹĚĖFIÔ“”")
         sequence = {
             u'х':'ch',
             u'щ':'šč',
             u'ю':'ju',
             u'я':'ja',
-            u'X':'Ch',
+            u'Х':'Ch',
             u'Щ':'Šč',
             u'Ю':'Ju',
             u'Я':'Ja'
@@ -82,8 +82,8 @@ def translit(text, lang):
         }
 
     if lang == "scr":
-        symbols = str.maketrans(u"абвгдђежзиjклмнопрстћуфхцчшАБВГДЕЖЗИJКЛМНОПРСТЋУФХЦЧШ«»",
-                               u"abvgdđežzijklmnoprstćufhcčšABVGDEŽZIJKLMNOPRSTĆUFHCČŠ“”")
+        symbols = str.maketrans(u"абвгдђежзијклмнопрстћуфхцчшАБВГДЂЕЖЗИЈКЛМНОПРСТЋУФХЦЧШ«»",
+                               u"abvgdđežzijklmnoprstćufhcčšABVGDĐEŽZIJKLMNOPRSTĆUFHCČŠ“”")
         sequence = {
             u'љ':'lj',
             u'њ':'nj',
