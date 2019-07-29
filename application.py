@@ -22,8 +22,8 @@ def translit(text, lang):
         }
 
     if lang == "ukr":
-        symbols = str.maketrans(u"абвгґдежзийклмнопрстуфцчшь’ѳѵАБВГҐДЕЖЗИЙКЛМНОПРСТУФЦЧШЬѲѴ«»",
-                               u"abvhgdežzyjklmnoprstufcčšʹʼfiABVHGDEŽZYJKLMNOPRSTUFCČŠʹFI“”")
+        symbols = str.maketrans(u"абвгґдежзиійклмнопрстуфцчшь’ѳѵАБВГҐДЕЖЗИІЙКЛМНОПРСТУФЦЧШЬѲѴ«»",
+                               u"abvhgdežzyijklmnoprstufcčšʹʼfiABVHGDEŽZYIJKLMNOPRSTUFCČŠʹFI“”")
         sequence = {
             u'є':'je',
             u'ї':'ji',
@@ -33,21 +33,21 @@ def translit(text, lang):
             u'я':'ja',
             u'Є':'Je',
             u'Ї':'Ji',
-            u'X':'Ch',
+            u'Х':'Ch',
             u'Щ':'Šč',
             u'Ю':'Ju',
             u'Я':'Ja'
         }
 
     if lang == "bru":
-        symbols = str.maketrans(u"абвгґдеëжзийклмнопрстуўфцчшыьэѳѵАБВГҐДЕЁЖЗИЙКЛМНОПРСТУЎФЦЧШЫЬЭѲѴ«»",
-                               u"abvhgdeëžzyjklmnoprstuŭfcčšyėʼfiABVHGDEЁŽZYJKLMNOPRSTUŬFCČŠYʹĖFI“”")
+        symbols = str.maketrans(u"абвгґдеёжзиійклмнопрстуўфцчшыэьѳѵАБВГҐДЕЁЖЗИІЙКЛМНОПРСТУЎФЦЧШЫЬЭѲѴ«»",
+                               u"abvhgdeëžziijklmnoprstuŭfcčšyėʼfiABVHGDEËŽZIIJKLMNOPRSTUŬFCČŠYʹĖFI“”")
         sequence = {
             u'х':'ch',
             u'щ':'šč',
             u'ю':'ju',
             u'я':'ja',
-            u'X':'Ch',
+            u'Х':'Ch',
             u'Щ':'Šč',
             u'Ю':'Ju',
             u'Я':'Ja'
@@ -61,21 +61,21 @@ def translit(text, lang):
             u'щ':'št',
             u'ю':'ju',
             u'я':'ja',
-            u'X':'Ch',
+            u'Х':'Ch',
             u'Щ':'Št',
             u'Ю':'Ju',
             u'Я':'Ja'
         }
 
     if lang == "mac":
-        symbols = str.maketrans(u"абвгѓдежзиjкќлмнопрстуфхцчшАБВГЃДЕЖЗИJКЌЛМНОПРСТУФXЦЧШ«»",
+        symbols = str.maketrans(u"абвгѓдежзијкќлмнопрстуфхцчшАБВГЃДЕЖЗИЈКЌЛМНОПРСТУФХЦЧШ«»",
                                u"abvgǵdežzijkḱlmnoprstufhcčšABVGǴDEŽZIJKḰLMNOPRSTUFHCČŠ“”")
         sequence = {
-            u's':'dz',
+            u'ѕ':'dz',
             u'љ':'lj',
             u'њ':'nj',
             u'џ':'dž',
-            u'S':'Dz',
+            u'Ѕ':'Dz',
             u'Љ':'Lj',
             u'Њ':'Nj',
             u'Џ':'Dž',
