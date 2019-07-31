@@ -7,7 +7,6 @@
 <h><b>LB transliterator</b></h><br><br>
 <font size="2">Notes on use:<br>
 * The Georgian transliterator will currently not recognize უ with diacritics (not in common use)<br>
-* Your choice under "original text" will not be saved upon refreshing, so make sure to select the correct option before pressing "submit" every time<br>
 * Text styles (such as italics) will not be preserved after transliteration, so make sure to reapply these where appropriate<br><br>
 </font>
 
@@ -26,7 +25,7 @@
             <option value="geo">Georgian (Mxedruli, Abkhaz, Megrelian, Ossetic)</option>
         </select><br>
         <textarea placeholder="Insert original text here" name="origtext" rows="10" cols="50"></textarea><br>
-        <input type="submit" value="Submit" id="submit">
+        <input type="submit" value="Submit">
 
 </form>
 
@@ -41,32 +40,10 @@
 {{ transliteration }}
 
 <script type = "text/javascript">
-/* document.querySelector('#submit').onclick = setCookie();
-
-languagecookie = getCookie();
-document.getElementById("selectlanguage").setAttribute('Selected', languagecookie);
-
-function setCookie(){
-    var value = document.getElementById("selectlanguage").value;
-    localStorage.setItem("language", value);
-}
-
-function getCookie(){
-    if (localStorage.getItem("language") === null) { // Check if a language was saved to local storage
-        return "rus";
-        }
-    return localStorage.getItem("language");
-}
-
-*/
 
 document.getElementById("selectlanguage").onchange = function() {
     localStorage.setItem("language", document.getElementById("selectlanguage").value);
 };
-
-/* if (localStorage.getItem("language")) {
-    document.getElementById("selectlanguage").options[localStorage.getItem("language")].selected = true;
-} */
 
 window.onload = function() {
     if(localStorage["language"])
