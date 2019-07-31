@@ -43,7 +43,8 @@
 <script type = "text/javascript">
 document.querySelector('#submit').onclick = setCookie();
 
-document.getElementById("selectlanguage").value = getCookie();
+languagecookie = getCookie();
+document.getElementById("selectlanguage").setAttribute('Selected', languagecookie);
 
 function setCookie(){
     var value = document.getElementById("selectlanguage").value;
