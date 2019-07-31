@@ -64,8 +64,9 @@ document.getElementById("selectlanguage").onchange = function() {
     localStorage.setItem("language", document.getElementById("selectlanguage").value);
 };
 
-language = localStorage.getItem("language");
-document.getElementById("selectlanguage").setAttribute('Selected', language);
+if (localStorage.getItem("language")) {
+    document.getElementById("selectlanguage").options[localStorage.getItem("language")].selected = true;
+}
 
 </script>
 
