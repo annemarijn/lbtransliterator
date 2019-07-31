@@ -64,9 +64,14 @@ document.getElementById("selectlanguage").onchange = function() {
     localStorage.setItem("language", document.getElementById("selectlanguage").value);
 };
 
-if (localStorage.getItem("language")) {
+/* if (localStorage.getItem("language")) {
     document.getElementById("selectlanguage").options[localStorage.getItem("language")].selected = true;
-}
+} */
+
+window.onload = function() {
+    if(localStorage["language"])
+        document.getElementById("selectlanguage").value = localStorage["language"];
+};
 
 </script>
 
