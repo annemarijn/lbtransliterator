@@ -43,6 +43,8 @@
 <script type = "text/javascript">
 document.querySelector("submit").onclick = setCookie();
 
+document.getElementById("selectlanguage").value = getCookie();
+
 function setCookie(){
     var value = document.getElementById("selectlanguage").value;
     localStorage.setItem("language", value);
@@ -54,8 +56,6 @@ function getCookie(){
         }
         return localStorage.getItem("language");
 }
-
-document.getElementById("selectlanguage").value = getCookie();
 
 </script>
 
