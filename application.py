@@ -126,7 +126,7 @@ def translit(text, lang):
                         u"აბგდევზჱთიკლმნჲოპჟრსტჳუფქღყშჩცძწჭხჴჯჰჵჶ„“ჷ")
 
         sequence = {
-            u'':'უ̌'
+            u'':'XXX'
         }
 
     for char in sequence.keys():
