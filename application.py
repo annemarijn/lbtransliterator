@@ -121,6 +121,10 @@ def translit(text, lang):
             u'ჯ':'dž'
         }
 
+    if lang == "geoblokt":
+        symbols = str.maketrans(u"abgdevzჱTiklmnჲopჟrstჳufqGKSCcZwWxჴjhჵჶ`~",
+                        u"აბგდევზჱთიკლმნჲოპჟრსტჳუფქღყშჩცძწჭხჴჯჰჵჶ„“ჷ")
+
     for char in sequence.keys():
         text = text.replace(char, sequence[char])
 
