@@ -125,6 +125,10 @@ def translit(text, lang):
         symbols = str.maketrans(u"abgdevzჱTiklmnჲopჟrstჳufqGKSCcZwWxჴjhჵჶ`~",
                         u"აბგდევზჱთიკლმნჲოპჟრსტჳუფქღყშჩცძწჭხჴჯჰჵჶ„“ჷ")
 
+        sequence = {
+            u'':'უ̌'
+        }
+
     for char in sequence.keys():
         text = text.replace(char, sequence[char])
 
