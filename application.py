@@ -39,6 +39,14 @@ def translit(text, lang):
             u'Я':'Ja'
         }
 
+    if lang == "aze":
+        symbols = str.maketrans(u"абвгґдежзиыјклмноөпрстуүфхһчҹш’АБВГҒДЕЖЗИЫЈКЛМНОӨПРСТУҮФХҺЧҸШ«»",
+                                u"abvgġdežziyǰklmnoôprstuùfhḥčĉšʼABVGĠDEŽZIYJKLMNOÔPRSTUÙFHḤČĈŠ“”")
+
+        sequence = {
+            u'':'XXX'
+        }
+
     if lang == "bru":
         symbols = str.maketrans(u"абвгґдеёжзиійклмнопрстуўфцчшыэьѳѵАБВГҐДЕЁЖЗИІЙКЛМНОПРСТУЎФЦЧШЫЬЭѲѴ«»",
                                u"abvhgdeëžziijklmnoprstuŭfcčšyėʼfiABVHGDEËŽZIIJKLMNOPRSTUŬFCČŠYʹĖFI“”")
