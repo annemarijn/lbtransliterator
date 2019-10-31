@@ -44,7 +44,9 @@ def translit(text, lang):
                                 u"abvgǵġğdđeëêžzźẑijìïyǰkḱlmnǹoôòpṕrstćțuūŭùfhḥcčĉšŝʺʹèûâěǎỳʼABVGǴĠĞDĐEËÊŽZŹẐIJÌÏYJKḰLMNǸOÔÒPṔRSTĆȚUŪŬÙFHḤCČĈŠŜʺʹÈÛÂĚǍỲ‡“”")
 
         sequence = {
-            u'':'XXX'
+            u'':'XXX',
+            u'Ҟ':'K̄',
+            u'ҟ':'k̄'
         }
 
     if lang == "bru":
