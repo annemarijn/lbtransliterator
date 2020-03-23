@@ -76,7 +76,9 @@ def translit(text, lang):
             u'Ґ':'G̀',
             u'ґ':'g̀',
             u'Ѳ':'F̀',
-            u'ѳ':'f̀'
+            u'ѳ':'f̀',
+            u'Җ':'Ž̦',
+            u'җ':'ž̦'
         }
 
     if lang == "bru":
