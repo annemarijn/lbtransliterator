@@ -18,7 +18,8 @@ def translit(text, lang):
             u'Х':'Ch',
             u'Щ':'Šč',
             u'Ю':'Ju',
-            u'Я':'Ja'
+            u'Я':'Ja',
+            u'№':'No.'
         }
 
     if lang == "ukr":
@@ -36,7 +37,8 @@ def translit(text, lang):
             u'Х':'Ch',
             u'Щ':'Šč',
             u'Ю':'Ju',
-            u'Я':'Ja'
+            u'Я':'Ja',
+            u'№':'No.'
         }
 
     if lang == "iso9":
@@ -78,7 +80,8 @@ def translit(text, lang):
             u'Ѳ':'F̀',
             u'ѳ':'f̀',
             u'Җ':'Ž̦',
-            u'җ':'ž̦'
+            u'җ':'ž̦',
+            u'№':'No.'
         }
 
     if lang == "bru":
@@ -92,7 +95,8 @@ def translit(text, lang):
             u'Х':'Ch',
             u'Щ':'Šč',
             u'Ю':'Ju',
-            u'Я':'Ja'
+            u'Я':'Ja',
+            u'№':'No.'
         }
 
     if lang == "bul":
@@ -106,7 +110,8 @@ def translit(text, lang):
             u'Х':'Ch',
             u'Щ':'Št',
             u'Ю':'Ju',
-            u'Я':'Ja'
+            u'Я':'Ja',
+            u'№':'No.'
         }
 
     if lang == "mac":
@@ -121,6 +126,7 @@ def translit(text, lang):
             u'Љ':'Lj',
             u'Њ':'Nj',
             u'Џ':'Dž',
+            u'№':'No.'
         }
 
     if lang == "scr":
@@ -133,11 +139,12 @@ def translit(text, lang):
             u'Љ':'Lj',
             u'Њ':'Nj',
             u'Џ':'Dž',
+            u'№':'No.'
         }
 
     if lang == "mon":
         symbols = str.maketrans(u"абвгдеёжзийклмноөпрстуүфцчшъыьэАБВГДЕЁЖЗИЙКЛМНОӨПРСТУҮФЦЧШЪЫЬЭ«»„”",
-                        u"abvgdeёžzijklmnoöprstuüfcčšʺyʹėABVGDEËŽZIJKLMNOÖPRSTUÜFCČŠʺYʹĖ“”\"\"")
+                        u"abvgdeëžzijklmnoöprstuüfcčšʺyʹėABVGDEËŽZIJKLMNOÖPRSTUÜFCČŠʺYʹĖ“”\"\"")
         sequence = {
             u'х':'ch',
             u'щ':'šč',
@@ -146,7 +153,8 @@ def translit(text, lang):
             u'X':'Ch',
             u'Щ':'Šč',
             u'Ю':'Ju',
-            u'Я':'Ja'
+            u'Я':'Ja',
+            u'№':'No.'
         }
 
     if lang == "geo":
@@ -160,7 +168,7 @@ def translit(text, lang):
             u'ძ':'dz',
             u'წ':'c’',
             u'ჭ':'č’',
-            u'ჯ':'dž'
+            u'ჯ':'dž',
         }
 
     if lang == "geoblokt":
