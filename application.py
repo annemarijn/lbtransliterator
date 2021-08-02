@@ -122,7 +122,7 @@ def translit(text, lang):
 
             u'륫':'lyus', u'륭':'lyung', u'르':'lu', u'륵':'luk', u'른':'lun', u'를':'lul', u'름':'lum', u'릅':'lup', u'릇':'lus', u'릉':'lung',
             u'릊':'luc', u'릍':'luth', u'릎':'luph', u'리':'li', u'릭':'lik', u'린':'lin', u'릴':'lil', u'림':'lim', u'립':'lip', u'릿':'lis',
-            u'링':'ling', u'마':'ma', u'막':'mak', u'만':'man', u'많':'manh', u'맏':'mat', u'말':'mal', u'맑':'malk', u'맒:'malm', u'맘':'mam',
+            u'링':'ling', u'마':'ma', u'막':'mak', u'만':'man', u'많':'manh', u'맏':'mat', u'말':'mal', u'맑':'malk', u'맒':'malm', u'맘':'mam',
             u'맙':'map', u'맛':'mas', u'망':'mang', u'맞':'mac', u'맡':'math', u'맣':'mah', u'매':'may', u'맥':'mayk', u'맨':'mayn', u'맬':'mayl',
             u'맴':'maym', u'맵':'mayp', u'맷':'mays', u'맸':'mayss', u'맹':'mayng', u'맺':'mayc', u'먀':'mya', u'먁':'myak', u'먈':'myal',
             u'먹':'mek', u'먼':'men', u'멀':'mel', u'멂':'melm', u'멈':'mem', u'멉':'mep', u'멋':'mes', u'멍':'meng', u'멎':'mec', u'멓':'meh',
