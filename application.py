@@ -7,7 +7,7 @@ app = Flask(__name__)
 # Credit to this person for inspiration https://stackoverflow.com/questions/14173421/use-string-translate-in-python-to-transliterate-cyrillic
 # Transliteration function
 def translit(text, lang):
-if lang == "kor":
+    if lang == "kor":
         symbols = str.maketrans(u"『』「」",
                                u"“”“”")
 
