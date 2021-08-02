@@ -7,7 +7,7 @@ app = Flask(__name__)
 # Credit to this person for inspiration https://stackoverflow.com/questions/14173421/use-string-translate-in-python-to-transliterate-cyrillic
 # Transliteration function
 def translit(text, lang):
-    if lang == "kor":
+if lang == "kor":
         symbols = str.maketrans(u"『』「」",
                                u"“”“”")
 
@@ -34,8 +34,9 @@ def translit(text, lang):
             u'겪':'kyekk', u'겫':'kyeks', u'견':'kyen', u'겭':'kyenc', u'겮':'kyenh', u'겯':'kyet', u'결':'kyel', u'겱':'kyelk', u'겲':'kyelm',
             u'겳':'kyelp', u'겴':'kyels', u'겵':'kyelth', u'겶':'kyelph', u'겷':'kyelh', u'겸':'kyem', u'겹':'kyep', u'겺':'kyeps', u'겻':'kyes',
             u'겼':'kyess', u'경':'kyeng', u'겾':'kyec', u'겿':'kyech', u'곀':'kyekh', u'곁':'kyeth', u'곂':'kyeph', u'곃':'kyeh',
-            u'고':'ko', u'곡':'kok', u'곤':'kon', u'곧':'kot', u'골':'kol', u'곪':'kolm', u'곬':'kols', u'곯':'kolh', u'곰':'kom',
-            u'곳':'kos', u'공':'kong', u'곶':'koc', u'과':'kwa', u'곽':'kwak', u'관':'kwan', u'괄':'kwal', u'괆':'kwalm',
+            u'고':'ko', u'곡':'kok', u'곤':'kon', u'곧':'kot', u'골':'kol', u'곪':'kolm', u'곬':'kols', u'곯':'kolh', u'곰':'kom', u'곱':'kop',
+            u'곳':'kos', u'공':'kong', u'곶':'koc', u'과':'kwa', u'곽':'kwak', u'관':'kwan', u'괄':'kwal', u'괆':'kwalm', u'계':'kyey',
+            u'곈':'kyeyn', u'곌':'kyeyl', u'곕':'kyeyp', u'곗':'kyeys',
 
             u'괌':'kwam', u'괍':'kwap', u'괏':'kwas', u'광':'kwang', u'괘':'kway', u'괜':'kwayn', u'괠':'kwayl', u'괩':'kwayp', u'괬':'kwayss',
             u'괭':'kwayng', u'괴':'koy', u'괵':'koyk', u'괸':'koyn', u'괼':'koyl', u'굄':'koym', u'굅':'koyp', u'굇':'koys', u'굉':'koyng',
@@ -71,7 +72,16 @@ def translit(text, lang):
             u'놀':'nol', u'놂':'nolm', u'놈':'nom', u'놉':'nop', u'놋':'nos', u'농':'nong', u'높':'noph', u'놓':'noh', u'놔':'nwa', u'놘':'nwan',
             u'놜':'nwal', u'놨':'nwass', u'뇌':'noy', u'뇐':'noyn', u'뇔':'noyl', u'뇜':'noym', u'뇝':'noyp',
 
-
+            u'뇟':'noys', u'뇨':'nyo', u'뇩':'nyok', u'뇬':'nyon', u'뇰':'nyol', u'뇹':'nyop', u'뇻':'nyos', u'뇽':'nyong', u'누':'nwu',
+            u'눅':'nwuk', u'눈':'nwun', u'눋':'nwut', u'눌':'nwul', u'눔':'nwum', u'눕':'nwup', u'눗':'nwus', u'눙':'nwung', u'눠':'nwe',
+            u'눴':'nwess', u'눼':'nwey', u'뉘':'nwi', u'뉜':'nwin', u'뉠':'nwil', u'뉨':'nwim', u'뉩':'nwip', u'뉴':'nyu', u'뉵':'nyuk', u'뉼':'nyul',
+            u'늄':'nyum', u'늅':'nyup', u'늉':'nyung', u'느':'nu', u'늑':'nuk', u'는':'nun', u'늘':'nul', u'늙':'nulk', u'늚':'nulm', u'늠':'num',
+            u'늡':'nup', u'늣':'nus', u'능':'nung', u'늦':'nuc', u'늪':'nuph', u'늬':'nuy', u'늰':'nuyn', u'늴':'nuyl', u'니':'ni', u'닉':'nik',
+            u'닌':'nin', u'닐':'nil', u'닒':'nilm', u'님':'nim', u'닙':'nip', u'닛':'nis', u'닝':'ning', u'닢':'niph', u'다':'ta', u'닥':'tak',
+            u'닦':'takk', u'단':'tan', u'닫':'tat', u'달':'tal', u'닭':'talk', u'닮':'talm', u'닯':'talp', u'닳':'talh', u'담':'tam', u'답':'tap',
+            u'닷':'tas', u'닸':'tass', u'당':'tang', u'닺':'tac', u'닻':'tach', u'닿':'tah', u'대':'tay', u'댁':'tayk', u'댄':'tayn', u'댈':'tayl',
+            u'댐':'taym', u'댑':'tayp', u'댓':'tays', u'댔':'tayss', u'댕':'tayng', u'댜':'tya', u'더':'te', u'덕':'tek', u'덖':'tekk', u'던':'ten',
+            u'덛':'tet', u'덜':'tel', u'덞':'telm', u'덟':'telp', u'덤':'tem', u'덥':'tep'
 
         }
 
