@@ -89,7 +89,7 @@ def translit(text, lang):
             u'뎨':'tyey', u'뎬':'tyeyn', u'도':'to', u'독':'tok', u'돈':'ton', u'돋':'tot', u'돌':'tol', u'돎':'tolm', u'돐':'tols',
             u'돔':'tom', u'돕':'top', u'돗':'tos', u'동':'tong', u'돛':'toch', u'돝':'toth', u'돠':'twa', u'돤':'twan', u'돨':'twal',
             u'돼':'tway', u'됐':'twayss', u'되':'toy', u'된':'toyn', u'될':'toyl', u'됨':'toym', u'됩':'toyp', u'됫':'toys', u'됴':'tyo',
-            u'두':'twu', u'둑':twuk', u'둔':'twun', u'둘':'twul', u'둠':'twum', u'둡':'twup', u'둣':'twus', u'둥':'twung', u'둬':'twe',
+            u'두':'twu', u'둑':'twuk', u'둔':'twun', u'둘':'twul', u'둠':'twum', u'둡':'twup', u'둣':'twus', u'둥':'twung', u'둬':'twe',
             u'뒀':'twess', u'뒈':'twey', u'뒝':'tweyng', u'뒤':'twi', u'뒨':'twin', u'뒬':'twil', u'뒵':'twip', u'뒷':'twis', u'뒹':'twing',
             u'듀':'tyu', u'듄':'tyun', u'듈':'tyul', u'듐':'tyum', u'듕':'tyung', u'드':'tu', u'득':'tuk', u'든':'tun', u'듣':'tut', u'들':'tul',
             u'듦':'tulm', u'듬':'tum', u'듭':'tup', u'듯':'tus', u'등':'tung', u'듸':'tuy', u'디':'ti', u'딕':'tik', u'딘':'tin', u'딛':'tit',
