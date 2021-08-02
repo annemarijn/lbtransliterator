@@ -125,6 +125,7 @@ def translit(text, lang):
             u'링':'ling', u'마':'ma', u'막':'mak', u'만':'man', u'많':'manh', u'맏':'mat', u'말':'mal', u'맑':'malk', u'맒':'malm', u'맘':'mam',
             u'맙':'map', u'맛':'mas', u'망':'mang', u'맞':'mac', u'맡':'math', u'맣':'mah', u'매':'may', u'맥':'mayk', u'맨':'mayn', u'맬':'mayl',
             u'맴':'maym', u'맵':'mayp', u'맷':'mays', u'맸':'mayss', u'맹':'mayng', u'맺':'mayc', u'먀':'mya', u'먁':'myak', u'먈':'myal',
+            u'먕':'myang', u'머':'me',
             u'먹':'mek', u'먼':'men', u'멀':'mel', u'멂':'melm', u'멈':'mem', u'멉':'mep', u'멋':'mes', u'멍':'meng', u'멎':'mec', u'멓':'meh',
             u'메':'mey', u'멕':'meyk', u'멘':'meyn', u'멜':'meyl', u'멤':'meym', u'멥':'meyp', u'멧':'meys', u'멨':'meyss', u'멩':'meyng',
             u'며':'mye', u'멱':'myek', u'면':'myen', u'멸':'myel', u'몃':'myes', u'몄':'myess', u'명':'myeng', u'몇':'myech', u'몌':'myey',
@@ -163,7 +164,81 @@ def translit(text, lang):
             u'삐':'ppi', u'삑':'ppik', u'삔':'ppin', u'삘':'ppil', u'삠':'ppim', u'삡':'ppip', u'삣':'ppis', u'삥':'pping', u'사':'sa', u'삭':'sak',
             u'삯':'saks', u'산':'san', u'삳':'sat', u'살':'sal', u'삵':'salk', u'삶':'salm', u'삼':'sam', u'삽':'sap', u'삿':'sas', u'샀':'sass',
             u'상':'sang', u'샅':'sath', u'새':'say', u'색':'sayk', u'샌':'sayn', u'샐':'sayl', u'샘':'saym', u'샙':'sayp', u'샛':'says',
-            u'샜':'sayss', u'생':'sayng', u'샤':'sya'
+            u'샜':'sayss', u'생':'sayng', u'샤':'sya',
+
+            u'샥':'syak', u'샨':'syan', u'샬':'syal', u'샴':'syam', u'샵':'syap', u'샷':'syas', u'샹':'syang', u'섀':'syay', u'섄':'syayn',
+            u'섈':'syayl', u'섐':'syaym', u'섕':'syayng', u'서':'se', u'석':'sek', u'섞':'sekk', u'섟':'seks', u'선':'sen', u'섣':'set',
+            u'설':'sel', u'섦':'selm', u'섧':'selp', u'섬':'sem', u'섭':'sep', u'섯':'ses', u'섰':'sess', u'성':'seng', u'섶':'seph', u'세':'sey',
+            u'섹':'seyk', u'센':'seyn', u'셀':'seyl', u'셈':'seym', u'셉':'seyp', u'셋':'seys', u'셌':'seyss', u'셍':'seyng', u'셔':'sye',
+            u'셕':'syek', u'션':'syen', u'셜':'syel', u'셤':'syem', u'셥':'syep', u'셧':'syes', u'셨':'syess', u'셩':'syeng', u'셰':'syey',
+            u'셴':'syeyn', u'셸':'syeyl', u'솅':'syeyng', u'소':'so', u'속':'sok', u'솎':'sokk', u'손':'son', u'솔':'sol', u'솖':'solm',
+            u'솜':'som', u'솝':'sop', u'솟':'sos', u'송':'song', u'솥':'soth', u'솨':'swa', u'솩':'swak', u'솬':'swan', u'솰':'swal', u'솽':'swang',
+            u'쇄':'sway', u'쇈':'swayn', u'쇌':'swayl', u'쇔':'swaym', u'쇗':'sways', u'쇘':'swayss', u'쇠':'soy', u'쇤':'soyn', u'쇨':'soyl',
+            u'쇰':'soym', u'쇱':'soyp', u'쇳':'soys', u'쇼':'syo', u'쇽':'syok', u'숀':'syon', u'숄':'syol', u'숌':'syom', u'숍':'syop',
+            u'숏':'syos', u'숑':'syong', u'수':'swu', u'숙':'swuk', u'순':'swun', u'숟':'swut', u'술':'swul', u'숨':'swum', u'숩':'swup',
+            u'숫':'swus', u'숭':'swung',
+
+            u'숯':'swuc', u'숱':'swuth', u'숲':'swuph', u'숴':'swe', u'쉈':'swess', u'쉐':'swey', u'쉑':'sweyk', u'쉔':'sweyn', u'쉘':'sweyl',
+            u'쉠':'sweym', u'쉥':'sweyng', u'쉬':'swi', u'쉭':'swik', u'쉰':'swin', u'쉴':'swil', u'쉼':'swim', u'쉽':'swip', u'쉿':'swis',
+            u'슁':'swing', u'슈':'syu', u'슉':'syuk', u'슐':'syul', u'슘':'syum', u'슛':'syus', u'슝':'syung', u'스':'su', u'슥':'suk', u'슨':'sun',
+            u'슬':'sul', u'슭':'sulk', u'슴':'sum', u'습':'sup', u'슷':'sus', u'승':'sung', u'시':'si', u'식':'sik', u'신':'sin', u'싣':'sit',
+            u'실':'sil', u'싫':'silh', u'심':'sim', u'십':'sip', u'싯':'sis', u'싱':'sing', u'싶':'siph', u'싸':'ssa', u'싹':'ssak', u'싻':'ssaks',
+            u'싼':'ssan', u'쌀':'ssal', u'쌈':'ssam', u'쌉':'ssap', u'쌌':'ssass', u'쌍':'ssang', u'쌓':'ssah', u'쌔':'ssay', u'쌕':'ssayk',
+            u'쌘':'ssayn', u'쌜':'ssayl', u'쌤':'ssaym', u'쌥':'ssayp', u'쌨':'ssayss', u'쌩':'ssayng', u'썅':'ssyang', u'써':'sse', u'썩':'ssek',
+            u'썬':'ssen', u'썰':'ssel', u'썲':'sselm', u'썸':'ssem', u'썹':'ssep', u'썼':'ssess', u'썽':'sseng', u'쎄':'ssey', u'쎈':'sseyn',
+            u'쎌':'sseyl', u'쏀':'ssyeyn', u'쏘':'sso', u'쏙':'ssok', u'쏜':'sson', u'쏟':'ssot', u'쏠':'ssol', u'쏢':'ssolm', u'쏨':'ssom',
+            u'쏩':'ssop', u'쏭':'ssong', u'쏴':'sswa', u'쏵':'sswak', u'쏸':'sswan', u'쐈':'sswass', u'쐐':'ssway', u'쐤':'sswayss',
+            u'쐬':'ssoy', u'쐰':'ssoyn',
+
+            u'쐴':'ssoyl', u'쐼':'ssoym', u'쐽':'ssoyp', u'쑈':'ssyo', u'쑤':'sswu', u'쑥':'sswuk', u'쑨':'sswun', u'쑬':'sswul', u'쑴':'sswum',
+            u'쑵':'sswup', u'쑹':'sswung', u'쒀':'sswe', u'쒔':'sswess', u'쒜':'sswey', u'쒸':'sswi', u'쒼':'sswin', u'쓩':'ssyung', u'쓰':'ssu',
+            u'쓱':'ssuk', u'쓴':'ssun', u'쓸':'ssul', u'쓺':'ssulm', u'쓿':'ssulh', u'씀':'ssum', u'씁':'ssup', u'씌':'ssuy', u'씐':'ssuyn',
+            u'씔':'ssuyl', u'씜':'ssuym', u'씨':'ssi', u'씩':'ssik', u'씬':'ssin', u'씰':'ssil', u'씸':'ssim', u'씹':'ssip', u'씻':'ssis',
+            u'씽':'ssing', u'아':'a', u'악':'ak', u'안':'an', u'앉':'anc', u'않':'anh', u'알':'al', u'앍':'alk', u'앎':'alm', u'앓':'alh',
+            u'암':'am', u'압':'ap', u'앗':'as', u'았':'ass', u'앙':'ang', u'앝':'ath', u'앞':'aph', u'애':'ay', u'액':'ayk', u'앤':'ayn',
+            u'앨':'ayl', u'앰':'aym', u'앱':'ayp', u'앳':'ays', u'앴':'ayss', u'앵':'ayng', u'야':'ya', u'약':'yak', u'얀':'yan', u'얄':'yal',
+            u'얇':'yalp', u'얌':'yam', u'얍':'yap', u'얏':'yas', u'양':'yang', u'얕':'yath', u'얗':'yah', u'얘':'yay', u'얜':'yayn', u'얠':'yayl',
+            u'얩':'yayp', u'어':'e', u'억':'ek', u'언':'en', u'얹':'enc', u'얻':'et', u'얼':'el', u'얽':'elk', u'얾':'elm', u'엄':'em',
+            u'업':'ep', u'없':'eps', u'엇':'es', u'었':'ess', u'엉':'eng', u'엊':'ec', u'엌':'ekh', u'엎':'eph',
+
+            u'에':'ey', u'엑':'eyk', u'엔':'eyn', u'엘':'eyl', u'엠':'eym', u'엡':'eyp', u'엣':'eys', u'엥':'eyng', u'여':'ye', u'역':'yek',
+            u'엮':'yekk', u'연':'yen', u'열':'yel', u'엶':'yelm', u'엷':'yelp', u'염':'yem', u'엽':'yep', u'엾':'yeps', u'엿':'yes', u'였':'yess',
+            u'영':'yeng', u'옅':'yeth', u'옆':'yeph', u'옇':'yeh', u'예':'yey', u'옌':'yeyn', u'옐':'yeyl', u'옘':'yeym', u'옙':'yeyp', u'옛':'yeys',
+            u'옜':'yeyss', u'오':'o', u'옥':'ok', u'온':'on', u'올':'ol', u'옭':'olk', u'옮':'olm', u'옰':'ols', u'옳':'olh', u'옴':'om', u'옵':'op',
+            u'옷':'os', u'옹':'ong', u'옻':'och', u'와':'wa', u'왁':'wak', u'완':'wan', u'왈':'wal', u'왐':'wam', u'왑':'wap', u'왓':'was', u'왔':'wass',
+            u'왕':'wang', u'왜':'way', u'왝':'wayk', u'왠':'wayn', u'왬':'waym', u'왯':'ways', u'왱':'wayng', u'외':'oy', u'왹':'oyk', u'왼':'oyn',
+            u'욀':'oyl', u'욈':'oym', u'욉':'oyp', u'욋':'oys', u'욍':'oyng', u'요':'yo', u'욕':'yok', u'욘':'yon', u'욜':'yol', u'욤':'yom', u'욥':'yop',
+            u'욧':'yos', u'용':'yong', u'우':'wu', u'욱':'wuk', u'운':'wun', u'울':'wul', u'욹':'wulk', u'욺':'wulm', u'움':'wum', u'웁':'wup',
+            u'웃':'wus', u'웅':'wung', u'워':'we', u'웍':'wek', u'원':'wen', u'월':'wel', u'웜':'wem', u'웝':'wep', u'웠':'wess', u'웡':'weng',
+            u'웨':'wey',
+
+            u'웩':'weyk', u'웬':'weyn', u'웰':'weyl', u'웸':'weym', u'웹':'weyp', u'웽':'weyng', u'위':'wi', u'윅':'wik', u'윈':'win',
+            u'윌':'wil', u'윔':'wim', u'윕':'wip', u'윗':'wis', u'윙':'wing', u'유':'yu', u'육':'yuk', u'윤':'yun', u'율':'yul', u'윰':'yum',
+            u'윱':'yup', u'윳':'yus', u'융':'yung', u'윷':'yuch', u'으':'u', u'윽':'uk', u'은':'un', u'을':'ul', u'읊':'ulph', u'음':'um',
+            u'읍':'up', u'읏':'us', u'응':'ung', u'읒':'uc', u'읓':'uch', u'읔':'ukh', u'읕':'uth', u'읖':'uph', u'읗':'uh', u'의':'uy',
+            u'읜':'uyn', u'읠':'uyl', u'읨':'uym', u'읫':'uys', u'이':'i', u'익':'ik', u'인':'in', u'일':'il', u'읽':'ilk', u'읾':'ilm',
+            u'잃':'ilh', u'임':'im', u'입':'ip', u'잇':'is', u'있':'iss', u'잉':'ing', u'잊':'ic', u'잎':'iph', u'자':'ca', u'작':'cak',
+            u'잔':'can', u'잖':'canh', u'잗':'cat', u'잘':'cal', u'잚':'calm', u'잠':'cam', u'잡':'cap', u'잣':'cas', u'잤':'cass', u'장':'cang',
+            u'잦':'cac', u'재':'cay', u'잭':'cayk', u'잰':'cayn', u'잴':'cayl', u'잼':'caym', u'잽':'cayp', u'잿':'cays', u'쟀':'cayss',
+            u'쟁':'cayng', u'쟈':'cya', u'쟉':'cyak', u'쟌':'cyan', u'쟎':'cyanh', u'쟐':'cyal', u'쟘':'cyam', u'쟝':'cyang', u'쟤':'cyay',
+            u'쟨':'cyayn', u'쟬':'cyayl', u'저':'ce', u'적':'cek', u'전':'cen', u'절':'cel', u'젊':'celm',
+
+            u'점':'cem', u'접':'cep', u'젓':'ces', u'정':'ceng', u'젖':'cec', u'제':'cey', u'젝':'ceyk', u'젠':'ceyn', u'젤':'ceyl', u'젬':'ceym',
+            u'젭':'ceyp', u'젯':'ceys', u'젱':'ceyng', u'져':'cye', u'젼':'cyen', u'졀':'cyel', u'졈':'cyem', u'졉':'cyep', u'졌':'cyess',
+            u'졍':'cyeng', u'졔':'cyey', u'조':'co', u'족':'cok', u'존':'con', u'졸':'col', u'졺':'colm', u'좀':'com', u'좁':'cop', u'좃':'cos',
+            u'종':'cong', u'좆':'coc', u'좇':'coch', u'좋':'coh', u'좌':'cwa', u'좍':'cwak', u'좔':'cwal', u'좝':'cwap', u'좟':'cwas', u'좡':'cwang',
+            u'좨':'cway', u'좼':'cwayss', u'좽':'cwayng', u'죄':'coy', u'죈':'coyn', u'죌':'coyl', u'죔':'coym', u'죕':'coyp', u'죗':'coys',
+            u'죙':'coyng', u'죠':'cyo', u'죡':'cyok', u'죤':'cyon', u'죵':'cyong', u'주':'cwu', u'죽':'cwuk', u'준':'cwun', u'줄':'cwul', u'줅':'cwulk',
+            u'줆':'cwulm', u'줌':'cwum', u'줍':'cwup', u'줏':'cwus', u'중':'cwung', u'줘':'cwe', u'줬':'cwess', u'줴':'cwey', u'쥐':'cwi',
+            u'쥑':'cwik', u'쥔':'cwin', u'쥘':'cwil', u'쥠':'cwim', u'쥡':'cwip', u'쥣':'cwis', u'쥬':'cyu', u'쥰':'cyun', u'쥴':'cyul', u'쥼':'cyum',
+            u'즈':'cu', u'즉':'cuk', u'즌':'cun', u'즐':'cul', u'즘':'cum', u'즙':'cup', u'즛':'cus', u'증':'cung', u'지':'ci', u'직':'cik',
+            u'진':'cin', u'짇':'cit', u'질':'cil', u'짊':'cilm', u'짐':'cim', u'집':'cip', u'짓':'cis'
+
+
+
+
+
+
 
         }
 
