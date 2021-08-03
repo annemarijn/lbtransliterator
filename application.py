@@ -499,7 +499,7 @@ def translit(text, lang):
 
         if lang == "kor":
             for sequence[char] in text:
-                if sequence[char] !== ' '
+                if sequence[char].isspace():
                     + "."
 
     return text.translate(symbols)
