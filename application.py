@@ -502,6 +502,10 @@ def translit(text, lang):
 
     if lang == "kor":
         text = text.replace('. ', ' ')
+        text = text.replace('.)', ')')
+        text = text.replace('.,', ',')
+        text = text.replace('.’', '’')
+        text = text.replace('.”', '”')
         if text.endswith('.'):
             text.rstrip('.')
 
