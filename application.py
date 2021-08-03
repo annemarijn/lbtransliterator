@@ -494,10 +494,11 @@ def translit(text, lang):
         }
 
     for char in sequence.keys():
+        # char = input character, sequence[char] = output characters
         text = text.replace(char, sequence[char])
 
         if lang == "kor":
-            for sequence:
+            for sequence[char] in text:
                 if sequence[char] !== ' '
                     + "."
 
