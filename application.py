@@ -506,8 +506,10 @@ def translit(text, lang):
         text = text.replace('.,', ',')
         text = text.replace('.’', '’')
         text = text.replace('.”', '”')
-        if text.endswith('.'):
-            text.rstrip('.')
+
+        text = text.rstrip('.')
+
+        text = text.capitalize()
 
     return text.translate(symbols)
 
