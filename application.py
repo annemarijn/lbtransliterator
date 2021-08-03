@@ -320,9 +320,6 @@ def translit(text, lang):
 
         }
 
-        for char in sequence.keys():
-            if char !== ' '
-                + "."
 
     if lang == "rus":
         symbols = str.maketrans(u"абвгдеёжзийклмнопрстуѹфцчшъыьѣэѳѵѡАБВГДЕЁЖЗИЙКЛМНОПРСТУѸФЦЧШЪЫЬѢЭѲѴѠ«»„”",
@@ -498,6 +495,11 @@ def translit(text, lang):
 
     for char in sequence.keys():
         text = text.replace(char, sequence[char])
+
+        if lang == "kor":
+            for sequence:
+                if sequence[char] !== ' '
+                    + "."
 
     return text.translate(symbols)
 
