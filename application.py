@@ -320,6 +320,9 @@ def translit(text, lang):
 
         }
 
+        for char in sequence.keys():
+            sequence[char] += '.'
+
 
     if lang == "rus":
         symbols = str.maketrans(u"абвгдеёжзийклмнопрстуѹфцчшъыьѣэѳѵѡАБВГДЕЁЖЗИЙКЛМНОПРСТУѸФЦЧШЪЫЬѢЭѲѴѠ«»„”",
@@ -497,10 +500,10 @@ def translit(text, lang):
         # char = input character, sequence[char] = output characters
         text = text.replace(char, sequence[char])
 
-        if lang == "kor":
-            for sequence[char] in text:
-                if sequence[char+1].isspace() == False:
-                    sequence[char] += '.'
+    if lang == "kor":
+        text = text.replace('. ', ' ')
+        if text.endswith('.'):
+            text.rstrip('.')
 
     return text.translate(symbols)
 
