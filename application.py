@@ -272,7 +272,7 @@ def translit(text, lang):
 
             u'큄':'khwim', u'큅':'khwip', u'큇':'khwis', u'큉':'khwing', u'큐':'khyu', u'큔':'khyun', u'큘':'khyul', u'큠':'khyum', u'크':'khu',
             u'큭':'khuk', u'큰':'khun', u'클':'khul', u'큼':'khum', u'큽':'khup', u'킁':'khung', u'키':'khi', u'킥':'khik', u'킨':'khin',
-            u'킴':'khim', u'킵':'khip', u'킷':'khis', u'킹':'khing', u'타':'tha', u'탁':'thak', u'탄':'than', u'탈':'thal', u'탉':'thalk',
+            u'킴':'khim', u'킬':'khil', u'킵':'khip', u'킷':'khis', u'킹':'khing', u'타':'tha', u'탁':'thak', u'탄':'than', u'탈':'thal', u'탉':'thalk',
             u'탐':'tham', u'탑':'thap', u'탓':'thas', u'탔':'thass', u'탕':'thang', u'태':'thay', u'택':'thayk', u'탠':'thayn', u'탤':'thayl',
             u'탬':'thaym', u'탭':'thayp', u'탯':'thays', u'탰':'thayss', u'탱':'thayng', u'탸':'thya', u'턍':'thyang', u'터':'the', u'턱':'thek',
             u'턴':'then', u'털':'thel', u'턺':'thelm', u'텀':'them', u'텁':'thep', u'텃':'thes', u'텄':'thess', u'텅':'theng', u'테':'they',
