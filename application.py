@@ -7,6 +7,22 @@ app = Flask(__name__)
 # Credit to this person for inspiration https://stackoverflow.com/questions/14173421/use-string-translate-in-python-to-transliterate-cyrillic
 # Transliteration function
 def translit(text, lang):
+    if lang =="osl":
+        symbols = str.maketrans(u"ТтЋћѸꙊѹꙋФфЦцЧчШшЪъЬьѢѣѦѧѪѫѲѳѴѵѠѡ", "TtǴǵUUuuFfCcČčŠšЪъЬьĚěĘęǪǫΘθÜüÔô")
+
+        sequence = {u"Х":"Ch", u"х":"ch", u"Щ":"Št", u"щ":"št", u"ъі":"y", u"ъи":"y", u"Ю":"Ju", u"ю":"ju", u"Ꙗ":"Ja", u"ꙗ":"ja", u"Ѥ":"Je",
+            u"ѥ":"je", u"Ѩ":"Ję", u"ѩ":"ję", u"Ѭ":"Jǫ", u"ѭ":"jǫ", u"Ѯ":"Ks", u"ѯ":"ks", u"Ѱ":"Ps", u"ѱ":"ps"
+            }
+
+    if lang == "oru":
+        symbols = str.maketrans(u"АаАаБбБбВвВвГгГгДдДдЕеЕеЁёЖжЖжЗзЗзꙀꙁИиИиЙйЙйКкКкЛлЛлМмМмНнНнОоОоПпПпРрРрСсСсТтТтУуУуѸѹѸѹꙊꙋФфФфЦцЦцЧчЧчШшШшЪъЪъЫыЬьЬьѢѣѢѣЭэѪѫѪѫѲѳѲѳѴѵѴѵѠѡѠѡ",
+            "AaAaBbBbVvVvGgGgDdDdEeEeËëŽžŽžZzZzZzIiIiJjJjKkKkLlLlMmMmNnNnOoOoPpPpRrRrSsSsTtTtUuUuUuUuUuFfFfCcCcČčČčŠšŠšЪъЪъYyЬьЬьĚěĚěĖėUuUuFfFfIiIiÔôÔô")
+
+        sequence = {u"Х":"Ch", u"х":"ch", u:"Х":"Ch", u"х":"ch", u"Щ":"Šč", u"щ":"šč", u"Щ":"Šč", u"щ":"šč", u"Ю":"Ju", u"ю":"ju", u"Ю":"Ju", u"ю":"ju",
+        u"Я":"Ja", u"я":"ja", u"Ꙗ":"Ja", u"ꙗ":"ja", u"Ѥ":"Je", u"ѥ":"je", u"Ѥ":"Je", u"ѥ":"je", u"Ѧ":"Ja", u"ѧ":"ja", u"Ѧ":"Ja", u"ѧ":"ja", u"Ѩ":"Ja",
+        u"ѩ":"ja", u"Ѩ":"Ja", u"ѩ":"ja", u"Ѭ":"Ju", u"ѭ":"ju", u"Ѭ":"Ju", u"ѭ":"ju"
+            }
+
     if lang == "kor":
         symbols = str.maketrans(u"『』「」",
                                u"“”“”")
