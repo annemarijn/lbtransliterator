@@ -8,10 +8,12 @@ app = Flask(__name__)
 # Transliteration function
 def translit(text, lang):
     if lang =="osl":
-        symbols = str.maketrans(u"ТтЋћѸꙊѹꙋФфЦцЧчШшЪъЬьѢѣѦѧѪѫѲѳѴѵѠѡ", "TtǴǵUUuuFfCcČčŠšЪъЬьĚěĘęǪǫΘθÜüÔô")
+        symbols = str.maketrans(u"АаБбВвТтЋћѸꙊѹꙋФфЦцЧчШшЪъЬьѢѣѦѧѪѫѲѳѴѵѠѡГгДдЕеЖжЗзꙀꙁИиЙйКкЛлМмНнОоПпРрСс",
+            "AaBbVvTtǴǵUUuuFfCcČčŠšЪъЬьĚěĘęǪǫΘθÜüÔôGgDdEeŽžZzZzIiJjKkLlMmNnOoPpRrSs")
 
         sequence = {u"Х":"Ch", u"х":"ch", u"Щ":"Št", u"щ":"št", u"ъі":"y", u"ъи":"y", u"Ю":"Ju", u"ю":"ju", u"Ꙗ":"Ja", u"ꙗ":"ja", u"Ѥ":"Je",
-            u"ѥ":"je", u"Ѩ":"Ję", u"ѩ":"ję", u"Ѭ":"Jǫ", u"ѭ":"jǫ", u"Ѯ":"Ks", u"ѯ":"ks", u"Ѱ":"Ps", u"ѱ":"ps"
+            u"ѥ":"je", u"Ѩ":"Ję", u"ѩ":"ję", u"Ѭ":"Jǫ", u"ѭ":"jǫ", u"Ѯ":"Ks", u"ѯ":"ks", u"Ѱ":"Ps", u"ѱ":"ps", u"Ѕ":"Dz", u"ѕ":"dz", u"Ꙃ":"Dz",
+            u"ꙃ":"dz"
             }
 
     if lang == "oru":
