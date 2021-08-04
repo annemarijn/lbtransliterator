@@ -18,7 +18,7 @@ def translit(text, lang):
         symbols = str.maketrans(u"АаАаБбБбВвВвГгГгДдДдЕеЕеЁёЖжЖжЗзЗзꙀꙁИиИиЙйЙйКкКкЛлЛлМмМмНнНнОоОоПпПпРрРрСсСсТтТтУуУуѸѹѸѹꙊꙋФфФфЦцЦцЧчЧчШшШшЪъЪъЫыЬьЬьѢѣѢѣЭэѪѫѪѫѲѳѲѳѴѵѴѵѠѡѠѡ",
             "AaAaBbBbVvVvGgGgDdDdEeEeËëŽžŽžZzZzZzIiIiJjJjKkKkLlLlMmMmNnNnOoOoPpPpRrRrSsSsTtTtUuUuUuUuUuFfFfCcCcČčČčŠšŠšЪъЪъYyЬьЬьĚěĚěĖėUuUuFfFfIiIiÔôÔô")
 
-        sequence = {u"Х":"Ch", u"х":"ch", u:"Х":"Ch", u"х":"ch", u"Щ":"Šč", u"щ":"šč", u"Щ":"Šč", u"щ":"šč", u"Ю":"Ju", u"ю":"ju", u"Ю":"Ju", u"ю":"ju",
+        sequence = {u"Х":"Ch", u"х":"ch", u"Х":"Ch", u"х":"ch", u"Щ":"Šč", u"щ":"šč", u"Щ":"Šč", u"щ":"šč", u"Ю":"Ju", u"ю":"ju", u"Ю":"Ju", u"ю":"ju",
         u"Я":"Ja", u"я":"ja", u"Ꙗ":"Ja", u"ꙗ":"ja", u"Ѥ":"Je", u"ѥ":"je", u"Ѥ":"Je", u"ѥ":"je", u"Ѧ":"Ja", u"ѧ":"ja", u"Ѧ":"Ja", u"ѧ":"ja", u"Ѩ":"Ja",
         u"ѩ":"ja", u"Ѩ":"Ja", u"ѩ":"ja", u"Ѭ":"Ju", u"ѭ":"ju", u"Ѭ":"Ju", u"ѭ":"ju"
             }
