@@ -8,8 +8,8 @@ app = Flask(__name__)
 # Transliteration function
 def translit(text, lang):
     if lang =="osl":
-        symbols = str.maketrans(u"АаБбВвТтЋћѸꙊѹꙋФфЦцЧчШшЪъЬьѢѣѦѧѪѫѲѳѴѵѠѡГгДдЕеЖжЗзꙀꙁИиЙйКкЛлМмНнОоПпРрСсЫы",
-            "AaBbVvTtǴǵUUuuFfCcČčŠšЪъЬьĚěĘęǪǫΘθÜüÔôGgDdEeŽžZzZzIiJjKkLlMmNnOoPpRrSsYy")
+        symbols = str.maketrans(u"АаБбВвТтЋћѸꙊѹꙋФфЦцЧчШшЪъЬьѢѣѦѧѪѫѲѳѴѵѠѡГгДдЕеЖжЗзꙀꙁИиЙйКкЛлМмНнОоПпРрСсЫы“",
+            "AaBbVvTtǴǵUUuuFfCcČčŠšЪъЬьĚěĘęǪǫΘθÜüÔôGgDdEeŽžZzZzIiJjKkLlMmNnOoPpRrSsYy\"")
 
         sequence = {u"Х":"Ch", u"х":"ch", u"Щ":"Št", u"щ":"št", u"ъі":"y", u"ъи":"y", u"Ю":"Ju", u"ю":"ju", u"Ꙗ":"Ja", u"ꙗ":"ja", u"Ѥ":"Je",
             u"ѥ":"je", u"Ѩ":"Ję", u"ѩ":"ję", u"Ѭ":"Jǫ", u"ѭ":"jǫ", u"Ѯ":"Ks", u"ѯ":"ks", u"Ѱ":"Ps", u"ѱ":"ps", u"Ѕ":"Dz", u"ѕ":"dz", u"Ꙃ":"Dz",
@@ -17,8 +17,8 @@ def translit(text, lang):
             }
 
     if lang == "oru":
-        symbols = str.maketrans(u"АаАаБбБбВвВвГгГгДдДдЕеЕеЁёЖжЖжЗзЗзꙀꙁИиИиЙйЙйКкКкЛлЛлМмМмНнНнОоОоПпПпРрРрСсСсТтТтУуУуѸѹѸѹꙊꙋФфФфЦцЦцЧчЧчШшШшЪъЪъЫыЬьЬьѢѣѢѣЭэѪѫѪѫѲѳѲѳѴѵѴѵѠѡѠѡ",
-            "AaAaBbBbVvVvGgGgDdDdEeEeËëŽžŽžZzZzZzIiIiJjJjKkKkLlLlMmMmNnNnOoOoPpPpRrRrSsSsTtTtUuUuUuUuUuFfFfCcCcČčČčŠšŠšЪъЪъYyЬьЬьĚěĚěĖėUuUuFfFfIiIiÔôÔô")
+        symbols = str.maketrans(u"АаАаБбБбВвВвГгГгДдДдЕеЕеЁёЖжЖжЗзЗзꙀꙁИиИиЙйЙйКкКкЛлЛлМмМмНнНнОоОоПпПпРрРрСсСсТтТтУуУуѸѹѸѹꙊꙋФфФфЦцЦцЧчЧчШшШшЪъЪъЫыЬьЬьѢѣѢѣЭэѪѫѪѫѲѳѲѳѴѵѴѵѠѡѠѡ“",
+            "AaAaBbBbVvVvGgGgDdDdEeEeËëŽžŽžZzZzZzIiIiJjJjKkKkLlLlMmMmNnNnOoOoPpPpRrRrSsSsTtTtUuUuUuUuUuFfFfCcCcČčČčŠšŠšЪъЪъYyЬьЬьĚěĚěĖėUuUuFfFfIiIiÔôÔô\"")
 
         sequence = {u"Х":"Ch", u"х":"ch", u"Х":"Ch", u"х":"ch", u"Щ":"Šč", u"щ":"šč", u"Щ":"Šč", u"щ":"šč", u"Ю":"Ju", u"ю":"ju", u"Ю":"Ju", u"ю":"ju",
         u"Я":"Ja", u"я":"ja", u"Ꙗ":"Ja", u"ꙗ":"ja", u"Ѥ":"Je", u"ѥ":"je", u"Ѥ":"Je", u"ѥ":"je", u"Ѧ":"Ja", u"ѧ":"ja", u"Ѧ":"Ja", u"ѧ":"ja", u"Ѩ":"Ja",
@@ -343,8 +343,8 @@ def translit(text, lang):
 
 
     if lang == "rus":
-        symbols = str.maketrans(u"абвгдеёжзийклмнопрстуѹфцчшъыьѣэѳѵѡАБВГДЕЁЖЗИЙКЛМНОПРСТУѸФЦЧШЪЫЬѢЭѲѴѠ«»„”",
-                               u"abvgdeëžzijklmnoprstuufcčšʺyʹěėfiôABVGDEËŽZIJKLMNOPRSTUUFCČŠʺYʹĚĖFIÔ“”\"\"")
+        symbols = str.maketrans(u"абвгдеёжзийклмнопрстуѹфцчшъыьѣэѳѵѡАБВГДЕЁЖЗИЙКЛМНОПРСТУѸФЦЧШЪЫЬѢЭѲѴѠ«»„”“",
+                               u"abvgdeëžzijklmnoprstuufcčšʺyʹěėfiôABVGDEËŽZIJKLMNOPRSTUUFCČŠʺYʹĚĖFIÔ“”\"\"\"")
         sequence = {
             u'х':'ch',
             u'щ':'šč',
@@ -358,8 +358,8 @@ def translit(text, lang):
         }
 
     if lang == "ukr":
-        symbols = str.maketrans(u"абвгґдежзиійклмнопрстуфцчшь’ѳѵАБВГҐДЕЖЗИІЙКЛМНОПРСТУФЦЧШЬѲѴ«»„”",
-                               u"abvhgdežzyijklmnoprstufcčšʹʼfiABVHGDEŽZYIJKLMNOPRSTUFCČŠʹFI“”\"\"")
+        symbols = str.maketrans(u"абвгґдежзиійклмнопрстуфцчшь’ѳѵАБВГҐДЕЖЗИІЙКЛМНОПРСТУФЦЧШЬѲѴ«»„”“",
+                               u"abvhgdežzyijklmnoprstufcčšʹʼfiABVHGDEŽZYIJKLMNOPRSTUFCČŠʹFI“”\"\"\"")
         sequence = {
             u'є':'je',
             u'ї':'ji',
@@ -377,8 +377,8 @@ def translit(text, lang):
         }
 
     if lang == "iso9":
-        symbols = str.maketrans(u"абвгѓғҕдђеёєжзӡѕийіїыјкќлмнԋоөҩпҧрстћҭуӯўүфхһцчҹшщъьэюяѣѫѵ’АБВГЃҒҔДЂЕЁЄЖЗӠЅИЙІЇЫЈКЌЛМНԊОӨҨПҦРСТЋҬУӮЎҮФХҺЦЧҸШЩЪЬЭЮЯѢѪѴӀ«»„”",
-                                u"abvgǵġğdđeëêžzźẑijìïyǰkḱlmnǹoôòpṕrstćțuūŭùfhḥcčĉšŝʺʹèûâěǎỳʼABVGǴĠĞDĐEËÊŽZŹẐIJÌÏYJKḰLMNǸOÔÒPṔRSTĆȚUŪŬÙFHḤCČĈŠŜʺʹÈÛÂĚǍỲ‡“”\"\"")
+        symbols = str.maketrans(u"абвгѓғҕдђеёєжзӡѕийіїыјкќлмнԋоөҩпҧрстћҭуӯўүфхһцчҹшщъьэюяѣѫѵ’АБВГЃҒҔДЂЕЁЄЖЗӠЅИЙІЇЫЈКЌЛМНԊОӨҨПҦРСТЋҬУӮЎҮФХҺЦЧҸШЩЪЬЭЮЯѢѪѴӀ«»„”“",
+                                u"abvgǵġğdđeëêžzźẑijìïyǰkḱlmnǹoôòpṕrstćțuūŭùfhḥcčĉšŝʺʹèûâěǎỳʼABVGǴĠĞDĐEËÊŽZŹẐIJÌÏYJKḰLMNǸOÔÒPṔRSTĆȚUŪŬÙFHḤCČĈŠŜʺʹÈÛÂĚǍỲ‡“”\"\"\"")
 
         sequence = {
             u'':'XXX',
@@ -420,8 +420,8 @@ def translit(text, lang):
         }
 
     if lang == "bru":
-        symbols = str.maketrans(u"абвгґдеёжзиійклмнопрстуўфцчшыэьѳѵАБВГҐДЕЁЖЗИІЙКЛМНОПРСТУЎФЦЧШЫЬЭѲѴ«»„”",
-                               u"abvhgdeëžziijklmnoprstuŭfcčšyėʼfiABVHGDEËŽZIIJKLMNOPRSTUŬFCČŠYʹĖFI“”\"\"")
+        symbols = str.maketrans(u"абвгґдеёжзиійклмнопрстуўфцчшыэьѳѵАБВГҐДЕЁЖЗИІЙКЛМНОПРСТУЎФЦЧШЫЬЭѲѴ«»„”“",
+                               u"abvhgdeëžziijklmnoprstuŭfcčšyėʼfiABVHGDEËŽZIIJKLMNOPRSTUŬFCČŠYʹĖFI“”\"\"\"")
         sequence = {
             u'х':'ch',
             u'щ':'šč',
@@ -435,8 +435,8 @@ def translit(text, lang):
         }
 
     if lang == "bul":
-        symbols = str.maketrans(u"абвгдежзийклмнопрстуфцчшъьѣѫАБВГДЕЖЗИЙКЛМНОПРСТУФЦЧШЪЬѢѪ«»„”",
-                               u"abvgdežzijklmnoprstufcčšăʹěŭABVGDEŽZIJKLMNOPRSTUFCČŠĂʹĚŬ“”\"\"")
+        symbols = str.maketrans(u"абвгдежзийклмнопрстуфцчшъьѣѫАБВГДЕЖЗИЙКЛМНОПРСТУФЦЧШЪЬѢѪ«»„”“",
+                               u"abvgdežzijklmnoprstufcčšăʹěŭABVGDEŽZIJKLMNOPRSTUFCČŠĂʹĚŬ“”\"\"\"")
         sequence = {
             u'х':'ch',
             u'щ':'št',
@@ -450,8 +450,8 @@ def translit(text, lang):
         }
 
     if lang == "mac":
-        symbols = str.maketrans(u"абвгѓдежзијкќлмнопрстуфхцчшАБВГЃДЕЖЗИЈКЌЛМНОПРСТУФХЦЧШ«»„”",
-                               u"abvgǵdežzijkḱlmnoprstufhcčšABVGǴDEŽZIJKḰLMNOPRSTUFHCČŠ“”\"\"")
+        symbols = str.maketrans(u"абвгѓдежзијкќлмнопрстуфхцчшАБВГЃДЕЖЗИЈКЌЛМНОПРСТУФХЦЧШ«»„”“",
+                               u"abvgǵdežzijkḱlmnoprstufhcčšABVGǴDEŽZIJKḰLMNOPRSTUFHCČŠ“”\"\"\"")
         sequence = {
             u'ѕ':'dz',
             u'љ':'lj',
@@ -465,8 +465,8 @@ def translit(text, lang):
         }
 
     if lang == "scr":
-        symbols = str.maketrans(u"абвгдђежзијклмнопрстћуфхцчшАБВГДЂЕЖЗИЈКЛМНОПРСТЋУФХЦЧШ«»„”",
-                               u"abvgdđežzijklmnoprstćufhcčšABVGDĐEŽZIJKLMNOPRSTĆUFHCČŠ“”\"\"")
+        symbols = str.maketrans(u"абвгдђежзијклмнопрстћуфхцчшАБВГДЂЕЖЗИЈКЛМНОПРСТЋУФХЦЧШ«»„”“",
+                               u"abvgdđežzijklmnoprstćufhcčšABVGDĐEŽZIJKLMNOPRSTĆUFHCČŠ“”\"\"\"")
         sequence = {
             u'љ':'lj',
             u'њ':'nj',
@@ -478,8 +478,8 @@ def translit(text, lang):
         }
 
     if lang == "mon":
-        symbols = str.maketrans(u"абвгдеёжзийклмноөпрстуүфцчшъыьэАБВГДЕЁЖЗИЙКЛМНОӨПРСТУҮФЦЧШЪЫЬЭ«»„”",
-                        u"abvgdeëžzijklmnoöprstuüfcčšʺyʹėABVGDEËŽZIJKLMNOÖPRSTUÜFCČŠʺYʹĖ“”\"\"")
+        symbols = str.maketrans(u"абвгдеёжзийклмноөпрстуүфцчшъыьэАБВГДЕЁЖЗИЙКЛМНОӨПРСТУҮФЦЧШЪЫЬЭ«»„”“",
+                        u"abvgdeëžzijklmnoöprstuüfcčšʺyʹėABVGDEËŽZIJKLMNOÖPRSTUÜFCČŠʺYʹĖ“”\"\"\"")
         sequence = {
             u'х':'ch',
             u'щ':'šč',
