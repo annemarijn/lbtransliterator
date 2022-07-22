@@ -358,7 +358,7 @@ def translit(text, lang):
         }
 
     if lang == "ukr":
-        symbols = str.maketrans(u"абвгґдежзиійклмнопрстуфцчшь’ѳѵАБВГҐДЕЖЗИІЙКЛМНОПРСТУФЦЧШЬѲѴ«»„”“",
+        symbols = str.maketrans(u"абвгґдежзиійклмнопрстуфцчшь’ѳѵАБВГҐДЕЖЗИІgitЙКЛМНОПРСТУФЦЧШЬѲѴ«»„”“",
                                u"abvhgdežzyijklmnoprstufcčšʹʼfiABVHGDEŽZYIJKLMNOPRSTUFCČŠʹFI“”\"\"\"")
         sequence = {
             u'є':'je',
