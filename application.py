@@ -524,8 +524,9 @@ def translit(text, lang):
         text = text.replace('.,', ',')
         text = text.replace('.’', '’')
         text = text.replace('.”', '”')
-        text = text.replace('.:', ':')
-        text = text.replace('.-', '-')
+        text = text.replace('.:', ' :')
+        text = text.replace('.-', ' -')
+        text = text.replace('.]', ']')
 
         text = text.rstrip('.')
 
