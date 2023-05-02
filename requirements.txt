@@ -23,7 +23,7 @@ distlib==0.3.2
 docutils==0.15.2
 EditorConfig==0.12.3
 filelock==3.0.12
-Flask==2.2.2
+Flask==2.3.2
 Flask-Session==0.4.0
 fonttools==4.26.2
 html5lib==1.1
