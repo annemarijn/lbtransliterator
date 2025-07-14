@@ -421,7 +421,7 @@ def translit(text, lang):
 
     if lang == "bru":
         symbols = str.maketrans(u"абвгґдеёжзиійклмнопрстуўфцчшыэьѳѵАБВГҐДЕЁЖЗИІЙКЛМНОПРСТУЎФЦЧШЫЬЭѲѴ«»„”“",
-                               u"abvhgdeëžziijklmnoprstuŭfcčšyėʼfiABVHGDEËŽZIIJKLMNOPRSTUŬFCČŠYʹĖFI“”\"\"\"")
+                               u"abvhgdeëžziijklmnoprstuŭfcčšyėʹfiABVHGDEËŽZIIJKLMNOPRSTUŬFCČŠYʹĖFI“”\"\"\"")
         sequence = {
             u'х':'ch',
             u'щ':'šč',
