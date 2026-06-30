@@ -361,6 +361,7 @@ def translit(text, lang):
         sequence = {
             u'є':'je',
             u'ї':'ji',
+            u'ï':'ji',
             u'х':'ch',
             u'щ':'šč',
             u'ю':'ju',
