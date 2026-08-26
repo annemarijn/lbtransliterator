@@ -477,11 +477,12 @@ def translit(text, lang):
         }
 
     if lang == "mon":
-        symbols = str.maketrans(u"абвгдеёжзийклмноөпрстуүфцчшъыьэАБВГДЕЁЖЗИЙКЛМНОӨПРСТУҮФЦЧШЪЫЬЭ«»„”“",
-                        u"abvgdeëžzijklmnoöprstuüfcčšʺyʹėABVGDEËŽZIJKLMNOÖPRSTUÜFCČŠʺYʹĖ“”\"\"\"")
+        symbols = str.maketrans(u"абвгдежзийклмноөпрстуүфцчшъыьэАБВГДЕЁЖЗИЙКЛМНОӨПРСТУҮФЦЧШЪЫЬЭ«»„”“",
+                        u"abvgdežzijklmnoöprstuüfcčšʺyʹėABVGDEËŽZIJKLMNOÖPRSTUÜFCČŠʺYʹĖ“”\"\"\"")
         sequence = {
             u'х':'ch',
             u'щ':'šč',
+            u'ё':'jo',
             u'ю':'ju',
             u'я':'ja',
             u'X':'Ch',
